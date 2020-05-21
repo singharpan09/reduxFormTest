@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Field, reduxForm, formValues } from "redux-form";
+import React from "react";
+import { Field, reduxForm } from "redux-form";
 
 import "./App.css";
 //Field is used to create input fields
