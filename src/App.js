@@ -11,4 +11,5 @@ function App() {
   );
 }
 
-export default App;
+export default reduxForm()(App);
+//now the component will be wrapped with redux form  like ...connect
