@@ -6,6 +6,8 @@ import "./App.css";
 //this incresase line of codes
 //Redux form automates the this process
 //&reduces no of lines of code
+//now we don't need "reducer" from "redux" package
+//now "reducer" will be used from "redux-form package"
 function App() {
   return (
     <div className="App">
