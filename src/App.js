@@ -10,6 +10,9 @@ function App() {
       <h3>This is redux form</h3>
       <label>First name</label>
       <Field type="text" name="firstname" component="input" />
+      <br />
+      <label>Last name</label>
+      <Field type="text" name="firstname" component="input" />
     </div>
   );
 }
