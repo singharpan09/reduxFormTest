@@ -11,13 +11,14 @@ function App(props) {
     <div className="App">
       <h3>This is redux form</h3>
       <form onSubmit={handleSubmit}>
+        <label>First name</label>
         <Field type="text" name="firstname" component="input" />
         <br />
         <label>Last name</label>
         <Field type="text" name="firstname" component="input" />
+        <br />
         <button type="submit">Submit It</button>
       </form>
-      <label>First name</label>
     </div>
   );
 }
