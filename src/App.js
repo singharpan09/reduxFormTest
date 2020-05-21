@@ -1,17 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Field, reduxForm } from "redux-form";
 import Profile from "./Profile";
 
 import "./App.css";
-//Field is used to create input fields
-//there is some necessary "props" to be provided to it
+//intilly profile will show error
+//therfore will make a condition that when form get submitted..then profile will show
+//there will make a local state for that
+//initlly state will be false..and profile will show when it get true
 function App(props) {
+  const [showProfile, setProfile] = useState(false);
   const { handleSubmit } = props;
   return (
     <div className="App">
       <h3>This is redux form</h3>
       <form
         onSubmit={handleSubmit((formValues) => {
+          setProfile(true);
           console.log(formValues);
         })}
       >
@@ -23,7 +27,7 @@ function App(props) {
         <br />
         <button type="submit">Submit It</button>
       </form>
-      <Profile />
+      {showProfile ? <Profile /> : null}
     </div>
   );
 }
