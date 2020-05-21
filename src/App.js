@@ -6,17 +6,22 @@ import "./App.css";
 //there is some necessary "props" to be provided to it
 function App(props) {
   console.log(props);
+  const { handleSubmit } = props;
   return (
     <div className="App">
       <h3>This is redux form</h3>
+      <form onSubmit={handleSubmit}>
+        <Field type="text" name="firstname" component="input" />
+        <br />
+        <label>Last name</label>
+        <Field type="text" name="firstname" component="input" />
+        <button type="submit">Submit It</button>
+      </form>
       <label>First name</label>
-      <Field type="text" name="firstname" component="input" />
-      <br />
-      <label>Last name</label>
-      <Field type="text" name="firstname" component="input" />
     </div>
   );
 }
+//onSubmit event form will call handleSubmit..that is coming from redux form "props"
 //redux-form provide different type of props
 export default reduxForm({
   form: "myform",
