@@ -6,7 +6,6 @@ import "./App.css";
 //Field is used to create input fields
 //there is some necessary "props" to be provided to it
 function App(props) {
-  console.log(props);
   const { handleSubmit } = props;
   return (
     <div className="App">
@@ -32,7 +31,7 @@ function App(props) {
 //onSubmit event form will call handleSubmit..that is coming from redux form "props"
 //redux-form provide different type of props
 export default reduxForm({
-  form: "myform",
+  form: "myForm",
 })(App);
 //component="input" --tells that it is input tag
 //type="text"---tells it is of type text

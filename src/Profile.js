@@ -5,7 +5,8 @@ import { connect } from "react-redux";
 
 import "./App.css";
 
-function Profile() {
+function Profile(props) {
+  console.log(props.values);
   return (
     <div className="App">
       <h3>This is redux form</h3>
@@ -14,5 +15,9 @@ function Profile() {
 }
 const mapStatetoProps = (state) => {
   console.log(state);
+  return {
+    formdata: state.form.myForm.values,
+  };
 };
 export default connect(mapStatetoProps)(Profile);
+//initially formdata will show error because..formdata does not exist until form get submit
