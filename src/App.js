@@ -37,6 +37,7 @@ function App(props) {
 export default reduxForm({
   form: "myForm",
 })(App);
+//in real application direct component="input" is not passed...we make custom component for that
 //component="input" --tells that it is input tag
 //type="text"---tells it is of type text
 //name field is also necessary
