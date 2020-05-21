@@ -11,5 +11,8 @@ function App() {
   );
 }
 
-export default reduxForm()(App);
+export default reduxForm({
+  form: "myform",
+})(App);
 //now the component will be wrapped with redux form  like ...connect
+//we have to pass a object to redux form ...with key....& a unique name
