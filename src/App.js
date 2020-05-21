@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, formValues } from "redux-form";
 
 import "./App.css";
 //Field is used to create input fields
@@ -10,18 +10,23 @@ function App(props) {
   return (
     <div className="App">
       <h3>This is redux form</h3>
-      <form onSubmit={handleSubmit}>
+      <form
+        onSubmit={handleSubmit((formValues) => {
+          console.log(formValues);
+        })}
+      >
         <label>First name</label>
         <Field type="text" name="firstname" component="input" />
         <br />
         <label>Last name</label>
-        <Field type="text" name="firstname" component="input" />
+        <Field type="text" name="lastname" component="input" />
         <br />
         <button type="submit">Submit It</button>
       </form>
     </div>
   );
 }
+//will pass a callback function to handleSubmit that will have form values
 //onSubmit event form will call handleSubmit..that is coming from redux form "props"
 //redux-form provide different type of props
 export default reduxForm({
