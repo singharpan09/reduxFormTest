@@ -1,5 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import Profile from "./Profile";
 
 import "./App.css";
 //Field is used to create input fields
@@ -23,6 +24,7 @@ function App(props) {
         <br />
         <button type="submit">Submit It</button>
       </form>
+      <Profile />
     </div>
   );
 }

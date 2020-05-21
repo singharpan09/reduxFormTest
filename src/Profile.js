@@ -1,15 +1,18 @@
 //now we will use all those from values here
 //now will use connect here
 import React from "react";
+import { connect } from "react-redux";
 
 import "./App.css";
 
-function Profile(props) {
+function Profile() {
   return (
     <div className="App">
       <h3>This is redux form</h3>
     </div>
   );
 }
-
-export default Profile;
+const mapStatetoProps = (state) => {
+  console.log(state);
+};
+export default connect(mapStatetoProps)(Profile);
